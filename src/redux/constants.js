@@ -1,0 +1,9 @@
+export const SPACEX_REQUEST = 'SPACEX_REQUEST';
+export const SPACEX_SUCCESS = 'SPACEX_SUCCESS';
+export const SPACEX_ERROR = 'SPACEX_ERROR';
+export const SPACEX_CLEAR = 'SPACEX_CLEAR';
+
+export const FILTER_REQUEST = 'FILTER_REQUEST';
+export const FILTER_SUCCESS = 'FILTER_SUCCESS';
+export const FILTER_ERROR = 'FILTER_ERROR';
+export const FILTER_CLEAR = 'FILTER_CLEAR';

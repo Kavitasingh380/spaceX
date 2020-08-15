@@ -1,0 +1,123 @@
+@import 'base';
+@import '~bootstrap/scss/bootstrap.scss';
+@import './explore';
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+  background: #ebebe0;
+}
+.hd6{
+  font-family: Montserrat;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+}
+.text_center{
+  text-align: center;
+}
+.devBy{
+  font-size: 17px;
+  font-weight: 500;
+}
+.filters_main{
+  background: #fff;
+    padding: 10px;
+    border-radius: 8px !important;
+}
+.sub_hd_fil{
+  text-align: center;
+  /* border-bottom: 1px solid; */
+  font-family: monospace;
+  font-family: Montserrat;
+  font-stretch: normal;
+  font-style: normal;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.year{
+  width: 100%;
+  border: 1px solid #00cc00;
+  background-color: #00cc00;
+  height: 30px;
+  border-radius: 7px !important;
+  padding: 5px;
+  text-align: center;
+  font-family: Montserrat;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+}
+.selected_year{
+  border: 1px solid #006600;
+  background-color: #006600;
+  color:#fff
+}
+.year:hover , .year:focus{
+  border: 1px solid #006600;
+  background-color: #006600;
+  color:#fff
+}
+.flex{
+  display: flex
+}
+.spaceX{
+  height: 500px;
+    background: #fff;
+    border-radius: 10px !important;
+    padding: 15px !important;
+}
+.innerSpaceX
+{padding: 10px;
+background: #ebebe0;
+border-radius: 10px !important;
+margin-bottom: 10Px;
+}
+
+.p_name{
+  color:#004d99 !important;
+  font-family: Montserrat;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 600;
+}
+span{
+  font-family: Montserrat;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 600;
+}
+.span_clr{
+  color:#85adad
+}

@@ -23,8 +23,8 @@
 │   │   ├── index            # index converging config
 │   │   └── production       # production config
 │   ├── modules              # Reusable Container Components
-│   │   └── home             # Dumb home View with link to login page
-│   │   └── login            # Dumb Login working with Apis
+│   │   └── spaceX            # Dumb SpaceX
+│   │   
 │   ├── redux                # Reducers and action for each module inside this dir
 │   │   ├── auth             # Container for module wise actions & reducer
 │   │   │   ├── actions      # Module wise actions

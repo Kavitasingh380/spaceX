@@ -122,12 +122,12 @@ class spaceX extends React.Component {
                   {item.links.mission_patch ? <div className="innerSpaceX">
                     <img src={item.links.mission_patch} width="100%" />
                   </div> : null}
-                  <p className="p_name">{item.mission_name} #{item.flight_number}</p>
-                  <p className="flex"><span>Mission IDs: </span><br/><span>{item.mission_id.length > 0 ? <ul>
+                  <p className="p_name space_nowrap">{item.mission_name} #{item.flight_number}</p>
+                  <p className=""><span>Mission IDs: </span><span>{item.mission_id.length > 0 ? <ul>
                     {item.mission_id.map((id, key) => <li key={key}>{id}</li>)}</ul> : "No Data "}</span></p>
-                  <p className="flex"><span>Launch year: </span><span className="span_clr"> {item.launch_year}</span></p>
-                  <p className="flex"><span>Successful Launch : </span><span className="span_clr"> {item.launch_success === true ? "True" : "False"}</span></p>
-                  <p className="flex"><span>Successful Landing: </span><span className="span_clr"> {item.launch_landing === true ? "True" : "False"}</span></p>
+                  <p className="flex space_nowrap"><span>Launch year: </span><span className="span_clr"> {item.launch_year}</span></p>
+                  <p className="flex "><span>Successful Launch : </span><span className="span_clr"> {item.launch_success === true ? "True" : "False"}</span></p>
+                  <p className="flex "><span>Successful Landing: </span><span className="span_clr"> {item.launch_landing === true ? "True" : "False"}</span></p>
                 </div>
                 <br />
               </div>

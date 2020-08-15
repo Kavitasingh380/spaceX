@@ -3,35 +3,38 @@ const path = require('path')
 const webpack = require('webpack')
 const logger = require('../build/lib/logger')
 const webpackConfig = require('../build/webpack.config')
+const ReactDOMServer = require('react-dom/server');
 const project = require('../project.config')
 const compress = require('compression')
+const  fs = require('fs');
+// const App = require('../src/routes/index')
 
 const app = express()
 const router = express.Router()
-app.use(compress())
+
 
 // ------------------------------------
 // Apply Webpack HMR Middleware
 // ------------------------------------
-const serverRenderer = (req, res, next) => {
-  fs.readFile(path.resolve('./src/index.html'), 'utf8', (err, data) => {
-    if (err) {
-      console.error(err)
-      return res.status(500).send('An error occurred')
-    }
-    return res.send(
-      data.replace(
-        '<div id="root"></div>',
-        `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`
-      )
-    )
-  })
-}
-router.use('^/$', serverRenderer)
-router.use(
-  express.static(path.resolve(__dirname, '..', 'build'), { maxAge: '30d' })
-)
-app.use(router)
+// app.get('/', (req, res) => {
+//   let ap = <App/>
+//   const apps = ReactDOMServer.renderToString(ap);
+
+//   const indexFile = path.resolve('./src/index.html');
+//   fs.readFile(indexFile, 'utf8', (err, data) => {
+//     if (err) {
+//       console.error('Something went wrong:', err);
+//       return res.status(500).send('Oops, better luck next time!');
+//     }
+
+//     return res.send(
+//       data.replace('<div id="root"></div>', `<div id="root">${apps}</div>`)
+//     );
+//   });
+// });
+
+app.use(compress())
+
 if (project.env === 'development') {
   const compiler = webpack(webpackConfig)
 

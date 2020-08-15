@@ -13,7 +13,7 @@ const Filters = (props) => {
                     <h4 className="sub_hd_fil">Launch Year</h4>
                     <hr />
                     {launchyears.map((yr,key)=>(
-                        <div className="col-md-6 col-sm-6 col-lg-6" key ={key} onClick={()=>props.updateSelectedYear(yr)}>
+                        <div className="col-md-12 col-sm-12 col-lg-6" key ={key} onClick={()=>props.updateSelectedYear(yr)}>
                         <div className={props.selectedYear===yr?"selected_year year":"year"}>{yr}</div><br/></div>
                      ))}
                 </div>
@@ -23,7 +23,7 @@ const Filters = (props) => {
                 <h4 className="sub_hd_fil">Successful Launch </h4>
                     <hr />
                     {successFullLaunch.map((launch,key)=>(
-                        <div className="col-md-6 col-sm-6 col-lg-6" key ={key} onClick={()=>props.updateSelectedLaunch(launch)}>
+                        <div className="col-md-12 col-sm-12 col-lg-6" key ={key} onClick={()=>props.updateSelectedLaunch(launch)}>
                         <div className={props.selectedLaunch===launch?"selected_year year":"year"}>{launch===true?"True":"False"}</div><br/></div>
                      ))}
                 </div>
@@ -33,7 +33,7 @@ const Filters = (props) => {
                 <h4 className="sub_hd_fil">Successful Landing</h4>
                     <hr />
                     {successLanding.map((landing,key)=>(
-                        <div className="col-md-6 col-sm-6 col-lg-6" key ={key} onClick={()=>props.updateSelectedLanding(landing)}>
+                        <div className="col-md-12 col-sm-12 col-lg-6" key ={key} onClick={()=>props.updateSelectedLanding(landing)}>
                         <div className={props.selectedLanding===landing?"selected_year year":"year"}>{landing===true?"True":"False"}</div><br/></div>
                      ))}
                 </div>
